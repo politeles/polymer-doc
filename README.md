@@ -101,10 +101,18 @@ joseenriquep@mortimer:~$ sudo npm -v
 1.3.10
 
 ```
+To avoid problems, I set the following command on my .bashrc:
+```bash
+ nvm use stable
+```
 ### Install yeoman
 Then, install yeoman:
 ```bash
 sudo npm install -g yo
+```
+From the official documentation [http://yeoman.io/learning/] you usually install the following components:
+`` bash
+npm install -g yo bower grunt-cli gulp
 ```
 
 you might see some warnings complaining about your node version.
@@ -188,4 +196,32 @@ generator-polymer@1.1.0 /home/joseenriquep/.nvm/versions/node/v0.12.7/lib/node_m
 ```bash
 yo polymer
 ```
+After that you can just check out the result:
+```bash
+gulp serve
+```
+That's the terminal output:
+```bash
+[11:15:43] Using gulpfile ~/Documentos/Develop/polymer-doc/polymer-doc/test-project/gulpfile.js
+[11:15:43] Starting 'styles'...
+[11:15:44] Starting 'elements'...
+[11:15:44] Starting 'images'...
+[11:15:45] Finished 'elements' after 647 ms
+[11:15:45] styles all files 98 B
+[11:15:45] Finished 'styles' after 1.57 s
+[11:15:45] images all files 24.13 kB
+[11:15:45] Finished 'images' after 849 ms
+[11:15:45] Starting 'serve'...
+[11:15:45] Finished 'serve' after 145 ms
+[PSK] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.0.102:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://192.168.0.102:3001
+ --------------------------------------
+[PSK] Serving files from: .tmp
+[PSK] Serving files from: app
 
+```
